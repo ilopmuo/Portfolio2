@@ -1,177 +1,186 @@
 .experience {
-    padding: 80px 0;
-    background-color: var(--background-primary);
+    padding: 4rem 2rem;
+    background-color: var(--background-secondary);
 }
 
 .experience-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-.experience-timeline {
+.experience-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.experience-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.timeline {
     position: relative;
-    margin-top: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.experience-timeline::before {
+.timeline::before {
     content: '';
     position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 2px;
-    height: calc(100% - 100px);
-    background-color: var(--accent-color);
-    opacity: 0.3;
 }
 
-.experience-card {
-    background-color: var(--card-background);
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px var(--shadow-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    margin-bottom: 2rem;
+.timeline-item {
+    margin-bottom: 3rem;
     position: relative;
-    width: calc(50% - 30px);
+    width: 100%;
+}
+
+.timeline-item:nth-child(even) {
     margin-left: auto;
-    border: 1px solid var(--border-color);
 }
 
-.experience-card:nth-child(odd) {
-    margin-right: auto;
-    margin-left: 0;
+.timeline-content {
+    position: relative;
+    width: calc(50% - 2rem);
+    padding: 1.5rem;
+    background-color: var(--background-primary);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.experience-card::before {
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-content::before {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     border-radius: 50%;
-    top: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.experience-card:nth-child(odd)::before {
-    right: -40px;
+.timeline-item:nth-child(odd) .timeline-content::before {
+    left: -3rem;
 }
 
-.experience-card:nth-child(even)::before {
-    left: -40px;
+.timeline-item:nth-child(even) .timeline-content::before {
+    right: -3rem;
 }
 
-.experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px var(--shadow-color);
-    border-color: var(--hover-border-color);
+.timeline-date {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.experience-title h3 {
+.timeline-title {
     color: var(--text-primary);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.company {
-    color: var(--accent-color);
-    font-weight: 500;
+.timeline-company {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
-.experience-meta {
-    color: var(--text-secondary);
+.timeline-description {
+    color: var(--text-primary);
     font-size: 0.9rem;
-}
-
-.experience-meta p {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.experience-meta i {
-    color: var(--accent-color);
-}
-
-.description {
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
     line-height: 1.6;
-}
-
-.achievements {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-}
-
-.achievements li {
-    color: var(--text-secondary);
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
-    line-height: 1.6;
-}
-
-.achievements i {
-    color: var(--accent-color);
-    font-size: 1.1rem;
-    margin-top: 0.2rem;
-}
-
-.technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tech-tag {
-    background-color: var(--background-secondary);
-    color: var(--text-secondary);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
-}
-
-.tech-tag:hover {
-    background-color: var(--accent-color);
-    color: var(--background-primary);
-    transform: translateY(-2px);
-    border-color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
-    .experience-timeline::before {
-        left: 20px;
+    .experience {
+        padding: 3rem 1rem;
     }
 
-    .experience-card {
-        width: calc(100% - 50px);
-        margin-left: 50px !important;
+    .experience-title h2 {
+        font-size: 2rem;
     }
 
-    .experience-card::before {
-        left: -40px !important;
+    .timeline::before {
+        left: 2rem;
     }
 
-    .experience-header {
-        flex-direction: column;
+    .timeline-content {
+        width: calc(100% - 4rem);
+        margin-left: 4rem !important;
     }
 
-    .experience-meta {
-        width: 100%;
+    .timeline-content::before {
+        left: -3rem !important;
+    }
+
+    .timeline-date {
+        font-size: 0.9rem;
+    }
+
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+
+    .timeline-company {
+        font-size: 0.9rem;
+    }
+
+    .timeline-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience {
+        padding: 2rem 0.8rem;
+    }
+
+    .experience-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .timeline::before {
+        left: 1.5rem;
+    }
+
+    .timeline-content {
+        width: calc(100% - 3rem);
+        margin-left: 3rem !important;
+        padding: 1.2rem;
+    }
+
+    .timeline-content::before {
+        width: 15px;
+        height: 15px;
+        left: -2.5rem !important;
+    }
+
+    .timeline-date {
+        font-size: 0.8rem;
+    }
+
+    .timeline-title {
+        font-size: 1rem;
+    }
+
+    .timeline-company {
+        font-size: 0.8rem;
+    }
+
+    .timeline-description {
+        font-size: 0.8rem;
+        line-height: 1.5;
     }
 } 
