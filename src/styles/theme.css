@@ -1,0 +1,56 @@
+:root[data-theme="light"] {
+    --background-primary: #ffffff;
+    --background-primary-rgb: 255, 255, 255;
+    --background-secondary: #f5f5f5;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --accent-color: #0066cc;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #e2e8f0;
+    --hover-border-color: #cbd5e0;
+}
+
+:root[data-theme="dark"] {
+    --background-primary: #1a202c;
+    --background-primary-rgb: 26, 32, 44;
+    --background-secondary: #2d3748;
+    --text-primary: #f7fafc;
+    --text-secondary: #a0aec0;
+    --accent-color: #4299e1;
+    --card-background: #2d3748;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-color: #4a5568;
+    --hover-border-color: #718096;
+}
+
+html {
+    scroll-padding-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+    scroll-behavior: smooth;
+}
+
+/* Aplicar el fondo oscuro al body y html */
+@media (prefers-color-scheme: dark) {
+    body, html {
+        background-color: var(--background-primary);
+        color: var(--text-primary);
+    }
+}
+
+/* Asegurar que las transiciones sean suaves */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Forzar el fondo oscuro en el html y body */
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+/* Asegurar que el contenedor principal tenga el fondo correcto */
+#root {
+    background-color: var(--background-primary);
+    min-height: 100vh;
+} 
