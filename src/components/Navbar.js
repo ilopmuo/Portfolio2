@@ -30,7 +30,7 @@ const Navbar = () => {
             ]
         },
         en: {
-            brand: "My Portfolio",
+            brand: "ILM",
             links: [
                 { href: "#sobre-mi", text: "About Me" },
                 { href: "#habilidades", text: "Skills" },

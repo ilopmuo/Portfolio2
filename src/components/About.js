@@ -19,7 +19,7 @@ const About = () => {
             title: "About Me",
             role: "Systems Engineer & Salesforce Developer",
             description: "I'm a 25-year-old systems engineer passionate about technology and innovation. With a university degree and a focus on developing effective technological solutions.",
-            education: "University Graduate",
+            education: "College Graduate",
             developer: "Full Stack Developer",
             salesforce: "Salesforce Developer",
             altImage: "Photo of Ignacio López Muñoyerro"

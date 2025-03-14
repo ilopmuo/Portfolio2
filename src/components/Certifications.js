@@ -70,16 +70,16 @@ const Certifications = () => {
                                 <img 
                                     src={cert.badge} 
                                     alt={cert.title} 
-                                    className="certification-icon"
+                                    className="certification-badge"
                                     loading="lazy"
                                 />
                             </div>
                             <div className="certification-content">
                                 <h3>{cert.title}</h3>
-                                <p className="issuer">
+                                <p>
                                     <i className="fas fa-building"></i> {cert.issuer}
                                 </p>
-                                <p className="date">
+                                <p>
                                     <i className="fas fa-calendar-alt"></i> {cert.date}
                                 </p>
                                 <div className="certification-skills">
