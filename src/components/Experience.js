@@ -15,7 +15,7 @@ const Experience = () => {
                     title: "Salesforce Developer",
                     company: "SEIDOR NTS",
                     period: "2024 - Actual",
-                    location: "Madrid, España",
+                    location: "Madrid, España (Remoto)",
                     description: "Desarrollo de soluciones personalizadas en Salesforce",
                     achievements: [
                         "Implementación de componentes Lightning Web Components",
@@ -23,7 +23,7 @@ const Experience = () => {
                         "Optimización de procesos de negocio",
                         "Mantenimiento y mejora de aplicaciones existentes"
                     ],
-                    technologies: ["Apex", "Lightning Web Components", "SOQL", "JavaScript", "HTML5", "CSS3"]
+                    technologies: ["Apex", "Lightning Web Components", "SQL", "JavaScript", "HTML5", "CSS3", "Java"]
                 },
                 
             ]
@@ -36,8 +36,8 @@ const Experience = () => {
                 {
                     title: "Salesforce Developer",
                     company: "SEIDOR NTS",
-                    period: "2023 - Present",
-                    location: "Madrid, Spain",
+                    period: "2024 - Present",
+                    location: "Madrid, Spain (Remote)",
                     description: "Development of custom Salesforce solutions",
                     achievements: [
                         "Implementation of Lightning Web Components",
@@ -45,7 +45,7 @@ const Experience = () => {
                         "Business process optimization",
                         "Maintenance and improvement of existing applications"
                     ],
-                    technologies: ["Apex", "Lightning Web Components", "SOQL", "JavaScript", "HTML5", "CSS3"]
+                    technologies: ["Apex", "Lightning Web Components", "SQL", "JavaScript", "HTML5", "CSS3", "Java"]
                 },
                 
             ]
