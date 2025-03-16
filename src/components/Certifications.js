@@ -13,7 +13,7 @@ const Certifications = () => {
                 {
                     title: "Salesforce Certified AI Associate",
                     issuer: "Salesforce",
-                    date: "Marzo 2024",
+                    date: "Noviembre 2024",
                     icon: "fas fa-robot",
                     badge: "/2023-07_Badge_SF-Certified_AI-Associate_High-Res.webp",
                     diploma: "/AiAssociateDiplo.png",
@@ -36,7 +36,7 @@ const Certifications = () => {
                 {
                     title: "Salesforce Certified AI Associate",
                     issuer: "Salesforce",
-                    date: "March 2024",
+                    date: "November 2024",
                     icon: "fas fa-robot",
                     badge: "/2023-07_Badge_SF-Certified_AI-Associate_High-Res.webp",
                     diploma: "/AiAssociateDiplo.png",
