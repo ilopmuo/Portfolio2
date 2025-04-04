@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fondo -->
+    <rect width="800" height="400" fill="#f5f5f5"/>
+    
+    <!-- Icono de Excel -->
+    <rect x="200" y="100" width="400" height="200" rx="20" fill="#217346"/>
+    <rect x="220" y="120" width="360" height="160" rx="10" fill="white"/>
+    
+    <!-- Líneas de la hoja de cálculo -->
+    <line x1="220" y1="160" x2="580" y2="160" stroke="#e0e0e0" stroke-width="2"/>
+    <line x1="220" y1="200" x2="580" y2="200" stroke="#e0e0e0" stroke-width="2"/>
+    <line x1="220" y1="240" x2="580" y2="240" stroke="#e0e0e0" stroke-width="2"/>
+    
+    <!-- Icono de candado -->
+    <circle cx="400" cy="180" r="30" fill="#4CAF50"/>
+    <rect x="385" y="170" width="30" height="40" rx="5" fill="#4CAF50"/>
+    <circle cx="400" cy="180" r="10" fill="white"/>
+    
+    <!-- Texto -->
+    <text x="400" y="320" font-family="Arial" font-size="24" fill="#333" text-anchor="middle">Excel Permissions Generator</text>
+</svg> 
