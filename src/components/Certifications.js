@@ -26,6 +26,23 @@ const Certifications = () => {
                         "AI Cloud",
                         "Generative AI"
                     ]
+                },
+                {
+                    title: "Salesforce Certified Administrator",
+                    issuer: "Salesforce",
+                    date: "Abril 2025",
+                    icon: "fas fa-user-cog",
+                    badge: "/administrator.png",
+                    diploma: "/Cert6088493_Administrator_20250424 (1)_page-0001.jpg",
+                    credentialId: "Administrator",
+                    skills: [
+                        "Configuración de Usuarios",
+                        "Seguridad y Accesos",
+                        "Gestión de Datos",
+                        "Flujos de Trabajo",
+                        "Informes y Dashboards",
+                        "Personalización de Objetos"
+                    ]
                 }
             ]
         },
@@ -48,6 +65,23 @@ const Certifications = () => {
                         "Einstein Bots",
                         "AI Cloud",
                         "Generative AI"
+                    ]
+                },
+                {
+                    title: "Salesforce Certified Administrator",
+                    issuer: "Salesforce",
+                    date: "April 2025",
+                    icon: "fas fa-user-cog",
+                    badge: "/administrator.png",
+                    diploma: "/Cert6088493_Administrator_20250424 (1)_page-0001.jpg",
+                    credentialId: "Administrator",
+                    skills: [
+                        "User Configuration",
+                        "Security and Access",
+                        "Data Management",
+                        "Workflows",
+                        "Reports and Dashboards",
+                        "Object Customization"
                     ]
                 }
             ]

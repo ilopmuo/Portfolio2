@@ -72,10 +72,15 @@ const Hero = () => {
                         <i className="fab fa-github"></i>
                     </a>
                 </div>
-                <div className="hero-badge">
+                <div className="hero-badges">
                     <img 
                         src="/2023-07_Badge_SF-Certified_AI-Associate_High-Res.webp" 
                         alt={currentContent.altBadge}
+                        className="certification-badge"
+                    />
+                    <img 
+                        src="/administrator.png" 
+                        alt="Certificación Salesforce Administrator"
                         className="certification-badge"
                     />
                 </div>
