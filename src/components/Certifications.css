@@ -35,32 +35,83 @@
 
 .certifications-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    justify-items: center;
+}
+
+@media (min-width: 1024px) {
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
+        margin: 2rem auto 0;
+    }
 }
 
 .certification-card {
-    background: var(--bg-secondary);
+    background: var(--card-background);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .certification-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px var(--shadow-color);
     border-color: var(--hover-border-color);
 }
 
 .certification-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 1.5rem;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    min-height: 80px;
+}
+
+.certification-title-section {
+    flex: 1;
+    min-width: 0;
+}
+
+.certification-title-section h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.certification-meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.certification-meta p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certification-meta i {
+    color: var(--accent-color);
+}
+
+.certification-badges {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
 }
 
 .certification-icon {
@@ -73,46 +124,43 @@
     justify-content: center;
     color: white;
     font-size: 1.5rem;
+    flex-shrink: 0;
 }
 
 .certification-badge {
-    width: 100px;
-    height: auto;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     border-radius: 8px;
-}
-
-.certification-content h3 {
-    color: var(--text-primary);
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}
-
-.certification-content p {
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .certification-skills {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 1rem 0;
+    margin-bottom: 1.5rem;
 }
 
 .skill-tag {
-    background: var(--bg-accent);
-    color: var(--text-primary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.875rem;
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
     border: 1px solid var(--border-color);
 }
 
+.skill-tag:hover {
+    background-color: var(--accent-color);
+    color: var(--background-primary);
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
 .certification-actions {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .view-diploma-button {
@@ -125,17 +173,25 @@
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .view-diploma-button:hover {
     background: var(--primary-color-dark);
+    transform: translateY(-2px);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .certification-card {
         max-width: 100%;
+        padding: 1.5rem;
     }
 
     .certification-header {

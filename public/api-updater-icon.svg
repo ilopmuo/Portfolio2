@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#1976d2" stroke="#0d47a1" stroke-width="4"/>
+  
+  <!-- API text -->
+  <text x="100" y="85" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">API</text>
+  
+  <!-- Update arrows -->
+  <g transform="translate(100, 120)">
+    <!-- Circular arrow -->
+    <path d="M -25 0 A 25 25 0 1 1 20 15" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arrow head -->
+    <polygon points="20,15 25,10 25,20" fill="white"/>
+  </g>
+  
+  <!-- Salesforce cloud icon -->
+  <g transform="translate(100, 140)">
+    <ellipse cx="0" cy="0" rx="30" ry="8" fill="white" opacity="0.8"/>
+    <ellipse cx="-10" cy="-3" rx="15" ry="6" fill="white" opacity="0.8"/>
+    <ellipse cx="10" cy="-3" rx="15" ry="6" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Gear icon for updater -->
+  <g transform="translate(70, 60)">
+    <circle cx="0" cy="0" r="8" fill="white" opacity="0.7"/>
+    <circle cx="0" cy="0" r="4" fill="#1976d2"/>
+    <rect x="-2" y="-12" width="4" height="4" fill="white" opacity="0.7"/>
+    <rect x="-2" y="8" width="4" height="4" fill="white" opacity="0.7"/>
+    <rect x="-12" y="-2" width="4" height="4" fill="white" opacity="0.7"/>
+    <rect x="8" y="-2" width="4" height="4" fill="white" opacity="0.7"/>
+  </g>
+  
+  <!-- Code brackets -->
+  <g transform="translate(130, 60)" fill="white" opacity="0.7">
+    <path d="M 0 0 L -4 4 L 0 8" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M 8 0 L 12 4 L 8 8" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+</svg> 

@@ -10,6 +10,15 @@ const Projects = () => {
             title: "Mis Proyectos",
             projects: [
                 {
+                    title: "Salesforce API Updater",
+                    description: "Aplicación de escritorio para actualizar masivamente las versiones de API de clases Apex, triggers y componentes LWC en proyectos de Salesforce. Interfaz intuitiva con preview de cambios y deploy integrado.",
+                    technologies: ["JavaScript", "Electron", "Node.js", "Salesforce CLI"],
+                    github: "https://github.com/ilopmuo/salesforce-api-updater",
+                    image: "/api-updater-icon.svg",
+                    download: null,
+                    downloadText: null
+                },
+                {
                     title: "Generador de Permisos Excel",
                     description: "Una herramienta en Python que automatiza la generación de permisos en archivos Excel. Permite configurar permisos específicos para diferentes usuarios y hojas de cálculo, mejorando la eficiencia en la gestión de documentos.",
                     technologies: ["Python", "openpyxl", "Tkinter"],
@@ -23,6 +32,15 @@ const Projects = () => {
         en: {
             title: "My Projects",
             projects: [
+                {
+                    title: "Salesforce API Updater",
+                    description: "Desktop application for massively updating API versions of Apex classes, triggers and LWC components in Salesforce projects. Intuitive interface with change preview and integrated deploy.",
+                    technologies: ["JavaScript", "Electron", "Node.js", "Salesforce CLI"],
+                    github: "https://github.com/ilopmuo/salesforce-api-updater",
+                    image: "/api-updater-icon.svg",
+                    download: null,
+                    downloadText: null
+                },
                 {
                     title: "Excel Permissions Generator",
                     description: "A Python tool that automates the generation of permissions in Excel files. It allows configuring specific permissions for different users and spreadsheets, improving document management efficiency.",
@@ -45,34 +63,37 @@ const Projects = () => {
                 <div className="projects-grid">
                     {currentContent.projects.map((project, index) => (
                         <div key={index} className="project-card">
-                            <div className="project-image">
-                                <img src={project.image} alt={project.title} loading="lazy" />
-                            </div>
-                            <div className="project-content">
-                                <h3 className="project-title">{project.title}</h3>
-                                <p className="project-description">{project.description}</p>
-                                <div className="project-tags">
-                                    {project.technologies.map((tech, i) => (
-                                        <span key={i} className="project-tag">{tech}</span>
-                                    ))}
+                            <div className="project-header">
+                                <div className="project-title-section">
+                                    <h3 className="project-title">{project.title}</h3>
+                                    <div className="project-meta">
+                                        <span>Proyecto personal</span>
+                                    </div>
                                 </div>
-                                <div className="project-links">
-                                    <a 
-                                        href={project.github} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
-                                        className="project-link github"
-                                    >
-                                        <i className="fab fa-github"></i> GitHub
-                                    </a>
-                                    <a 
-                                        href={project.download} 
-                                        download
-                                        className="project-link download"
-                                    >
+                                <div className="project-image-container">
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title} 
+                                        className="project-image"
+                                        loading="lazy" 
+                                    />
+                                </div>
+                            </div>
+                            <p className="project-description">{project.description}</p>
+                            <div className="project-tags">
+                                {project.technologies.map((tech, i) => (
+                                    <span key={i} className="project-tag">{tech}</span>
+                                ))}
+                            </div>
+                            <div className="project-links">
+                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link github">
+                                    <i className="fab fa-github"></i> GitHub
+                                </a>
+                                {project.download && (
+                                    <a href={project.download} className="project-link download" download>
                                         <i className="fas fa-download"></i> {project.downloadText}
                                     </a>
-                                </div>
+                                )}
                             </div>
                         </div>
                     ))}
